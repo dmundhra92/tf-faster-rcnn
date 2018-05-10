@@ -69,7 +69,7 @@ __C.TRAIN.MAX_SIZE = 1000
 __C.TRAIN.IMS_PER_BATCH = 1
 
 # Minibatch size (number of regions of interest [ROIs])
-__C.TRAIN.BATCH_SIZE = 128
+__C.TRAIN.BATCH_SIZE = 32
 
 # Fraction of minibatch that is labeled foreground (i.e. class > 0)
 __C.TRAIN.FG_FRACTION = 0.25
@@ -136,7 +136,7 @@ __C.TRAIN.RPN_CLOBBER_POSITIVES = False
 __C.TRAIN.RPN_FG_FRACTION = 0.5
 
 # Total number of examples
-__C.TRAIN.RPN_BATCHSIZE = 256
+__C.TRAIN.RPN_BATCHSIZE = 128
 
 # NMS threshold used on RPN proposals
 __C.TRAIN.RPN_NMS_THRESH = 0.7
@@ -166,10 +166,10 @@ __C.TEST = edict()
 
 # Scale to use during testing (can NOT list multiple scales)
 # The scale is the pixel size of an image's shortest side
-__C.TEST.SCALES = (600,)
+__C.TEST.SCALES = (256,)
 
 # Max pixel size of the longest side of a scaled input image
-__C.TEST.MAX_SIZE = 1000
+__C.TEST.MAX_SIZE = 256
 
 # Overlap threshold used for non-maximum suppression (suppress boxes with
 # IoU >= this threshold)
@@ -221,7 +221,7 @@ __C.RESNET.MAX_POOL = False
 
 # Number of fixed blocks during training, by default the first of all 4 blocks is fixed
 # Range: 0 (none) to 3 (all)
-__C.RESNET.FIXED_BLOCKS = 1
+__C.RESNET.FIXED_BLOCKS = 0
 
 #
 # MobileNet options
@@ -276,10 +276,10 @@ __C.POOLING_MODE = 'crop'
 __C.POOLING_SIZE = 7
 
 # Anchor scales for RPN
-__C.ANCHOR_SCALES = [4,8,16,32,64]
+__C.ANCHOR_SCALES = [16,32]
 
 # Anchor ratios for RPN
-__C.ANCHOR_RATIOS = [0.5,1,2]
+__C.ANCHOR_RATIOS = [1]
 
 # Number of filters for the RPN layer
 __C.RPN_CHANNELS = 512

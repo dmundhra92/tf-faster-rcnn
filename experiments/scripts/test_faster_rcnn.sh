@@ -18,8 +18,8 @@ case ${DATASET} in
   pascal_voc)
     TRAIN_IMDB="voc_2007_trainval"
     TEST_IMDB="voc_2007_test"
-    ITERS=70000
-    ANCHORS="[8,16,32]"
+    ITERS=250000
+    ANCHORS="[4,8,16,32,64]"
     RATIOS="[0.5,1,2]"
     ;;
   pascal_voc_0712)

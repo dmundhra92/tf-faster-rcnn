@@ -234,7 +234,7 @@ __C.MOBILENET.REGU_DEPTH = False
 
 # Number of fixed layers during training, by default the bottom 5 of 14 layers is fixed
 # Range: 0 (none) to 12 (all)
-__C.MOBILENET.FIXED_LAYERS = 0
+__C.MOBILENET.FIXED_LAYERS = 5
 
 # Weight decay for the mobilenet weights
 __C.MOBILENET.WEIGHT_DECAY = 0.00004
@@ -276,7 +276,7 @@ __C.POOLING_MODE = 'crop'
 __C.POOLING_SIZE = 7
 
 # Anchor scales for RPN
-__C.ANCHOR_SCALES = [4,8,16,32,64]
+__C.ANCHOR_SCALES = [8,16,32]
 
 # Anchor ratios for RPN
 __C.ANCHOR_RATIOS = [0.5,1,2]

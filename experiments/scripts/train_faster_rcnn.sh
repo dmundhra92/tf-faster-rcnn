@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 set -x
 set -e
@@ -18,9 +18,9 @@ case ${DATASET} in
   pascal_voc)
     TRAIN_IMDB="voc_2007_trainval"
     TEST_IMDB="voc_2007_test"
-    STEPSIZE="[50000]"
-    ITERS=70000
-    ANCHORS="[8,16,32]"
+    STEPSIZE="[80000]"
+    ITERS=300000
+    ANCHORS="[4,8,16,32,64]"
     RATIOS="[0.5,1,2]"
     ;;
   pascal_voc_0712)

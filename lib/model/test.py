@@ -152,6 +152,8 @@ def test_net(sess, net, imdb, weights_filename, max_per_image=100, thresh=0.):
   for i in range(num_images):
     im = cv2.imread(imdb.image_path_at(i))
 
+    print("DJ:%d:%s"%(i,imdb.image_path_at(i)))
+
     _t['im_detect'].tic()
     scores, boxes = im_detect(sess, net, im)
     _t['im_detect'].toc()
@@ -190,4 +192,3 @@ def test_net(sess, net, imdb, weights_filename, max_per_image=100, thresh=0.):
 
   print('Evaluating detections')
   imdb.evaluate_detections(all_boxes, output_dir)
-
